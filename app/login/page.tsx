@@ -39,12 +39,14 @@ export default function Login() {
         .then(response => response.json())
         .then(data => {
           if (data.token) {
+            // Save token in localStorage
             localStorage.setItem('token', data.token);
-            setSuccessMessage('Login successful!');
-            document.cookie = "token=" + data.token + ";path=/";
+            // Set cookie for currentUser
+            document.cookie = `currentUser=${data.token}; path=/;`;
+            setSuccessMessage('Login successful! Redirecting to home page.');
             setTimeout(() => {
               window.location.href = '/';
-            }, 5000);
+            }, 1000); // Redirect after 1 second
           } else {
             setErrorMessage('Login failed, please check your username/password!');
           }
@@ -61,20 +63,13 @@ export default function Login() {
     <div className="bg-cover bg-center h-screen loginBG">
       <div className="flex items-center justify-center h-full">
         <div className={`bg-white px-16 py-20 rounded-lg shadow-lg text-center ${interR.className}`}>
+          <h2 className={`text-3xl mb-2 text-black ${inter.className}`}>Login</h2>
           {successMessage ? (
-            <>
-                <div className={`mb-4 text-3xl p-3 ${inter.className}`}>
-                    {successMessage}
-                    <br/>
-                    <a href='/' target='_self' className={`mt-8 text-sm text-gray-400 underline ${interR.className}`}>Redirecting to home page...</a>
-                </div>
-                <div className="flex justify-center">
-                    <Image src="/logoBB.png" width={150} height={100} alt="BettaBeal" className="mt-8"/>
-                </div>
-            </>
+            <div className="mb-4 text-sm text-green-500 bg-green-200 border-2 border-green-400 rounded-md p-3">
+              {successMessage}
+            </div>
           ) : (
             <>
-              <h2 className={`text-3xl mb-2 text-black ${inter.className}`}>Login</h2>
               <p className="text-gray-400 mb-16">New to Our Product? <a href="/register" className="text-blue-500">Create an Account</a></p>
               {errorMessage && (
                 <div className="mb-4 text-sm text-red-500 bg-red-200 border-2 border-red-400 rounded-md p-3">
