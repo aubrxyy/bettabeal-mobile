@@ -34,7 +34,7 @@ export default function Dashboard() {
   }, [router]);
 
   if (!isAuthorized) {
-    return null; // Or a loading spinner
+    return null; 
   }
 
   return (
