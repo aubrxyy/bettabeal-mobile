@@ -43,16 +43,14 @@ export default function Login() {
           if (data.token) {
             localStorage.setItem('token', data.token);
             setCookie('currentUser', data.token, 1);
-            setCookie('userRole', data.user.role, 1);-
-              setSuccessMessage(() => {
-                if (data.user.role === 'seller') {
-                  return 'Login successful! Redirecting to dashboard.';
-                } else if (data.user.role === 'customer') {
-                  return 'Login successful! Redirecting to home page.';
-                }
-                return null;
-              }
-            );
+            setCookie('userRole', data.user.role, 1);
+            if (data.user.role === 'seller') {
+              setSuccessMessage('Login successful! Redirecting to dashboard.');
+            } else if (data.user.role === 'customer') {
+              setSuccessMessage('Login successful! Redirecting to home page.');
+            } else {
+              setSuccessMessage(null);
+            }
             setTimeout(() => {
               if (data.user.role === 'seller') {
                 window.location.href = '/dashboard';

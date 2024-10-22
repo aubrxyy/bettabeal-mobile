@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
@@ -34,7 +34,7 @@ export default function Header() {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlHeader = () => {
+   const controlHeader = useCallback(() => {
     if (typeof window !== 'undefined') {
       if (window.scrollY > lastScrollY) {
         setShowHeader(false);
@@ -43,7 +43,7 @@ export default function Header() {
       }
       setLastScrollY(window.scrollY);
     }
-  };
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -53,7 +53,7 @@ export default function Header() {
         window.removeEventListener('scroll', controlHeader);
       };
     }
-  }, [lastScrollY]);
+  }, [controlHeader]);
 
   return (
     <Disclosure as="nav" className={`z-100 sticky top-0 bg-white transition-transform duration-300 ${interM.className} ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
