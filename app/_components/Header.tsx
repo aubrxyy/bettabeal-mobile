@@ -29,11 +29,7 @@ const navigation = [
   { name: "Profile", href: "/profile" }
 ];
 
-interface HeaderProps {
-  children?: React.ReactNode;
-}
-
-export default function Header(props: HeaderProps) {
+export default function Header() {
   const pathname = usePathname();
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);

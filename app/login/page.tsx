@@ -1,10 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
-import { getCookie, setCookie } from '../utils/cookies';
+import { setCookie } from '../utils/cookies';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,7 +16,6 @@ const interR = Inter({
 })
 
 export default function Login() {
-  const router = useRouter();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
