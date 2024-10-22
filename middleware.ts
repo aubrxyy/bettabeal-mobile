@@ -3,22 +3,28 @@ import { NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const currentUser = request.cookies.get('currentUser')?.value;
+  const userRole = request.cookies.get('userRole')?.value;
   console.log('Current User:', currentUser);
+  console.log('User Role:', userRole);
   console.log('Request Path:', request.nextUrl.pathname);
 
   // Allow access to public assets and specific public pages
-  const publicPaths = ['/login', '/register', '/public', '/framebg.jpg', '/logoBB.png'];
+  const publicPaths = ['/', '/login', '/register', '/public', '/framebg.jpg', '/logoBB.png'];
   const isPublicPath = publicPaths.some(path => request.nextUrl.pathname.startsWith(path));
 
   if (isPublicPath) {
     return NextResponse.next();
   }
 
-  if (currentUser && !request.nextUrl.pathname.startsWith('/dashboard')) {
+  if (currentUser && userRole === 'seller' && request.nextUrl.pathname === '/') {
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
 
-  if (!currentUser && !request.nextUrl.pathname.startsWith('/login')) {
+  if (currentUser && userRole === 'customer' && request.nextUrl.pathname === '/') {
+    return NextResponse.next();
+  }
+
+  if (!currentUser && !isPublicPath) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 

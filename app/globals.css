@@ -5,6 +5,8 @@
 body {
   color: black;
   background: white;
+  height: 100vh;
+  width: 100vw;
 }
 
 @layer utilities {
@@ -15,4 +17,8 @@ body {
 
 .loginBG {
   background-image: url('/framebg.jpg');
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #0F4A99, #38B6FF);
 }

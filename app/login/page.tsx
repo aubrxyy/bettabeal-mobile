@@ -1,7 +1,10 @@
-'use client';
+'use client'
+
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
+import { getCookie, setCookie } from '../utils/cookies';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,6 +17,7 @@ const interR = Inter({
 })
 
 export default function Login() {
+  const router = useRouter();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
@@ -39,13 +43,24 @@ export default function Login() {
         .then(response => response.json())
         .then(data => {
           if (data.token) {
-            // Save token in localStorage
             localStorage.setItem('token', data.token);
-            // Set cookie for currentUser
-            document.cookie = `currentUser=${data.token}; path=/;`;
-            setSuccessMessage('Login successful! Redirecting to home page.');
+            setCookie('currentUser', data.token, 1);
+            setCookie('userRole', data.user.role, 1);-
+              setSuccessMessage(() => {
+                if (data.user.role === 'seller') {
+                  return 'Login successful! Redirecting to dashboard.';
+                } else if (data.user.role === 'customer') {
+                  return 'Login successful! Redirecting to home page.';
+                }
+                return null;
+              }
+            );
             setTimeout(() => {
-              window.location.href = '/';
+              if (data.user.role === 'seller') {
+                window.location.href = '/dashboard';
+              } else if (data.user.role === 'customer') {
+                window.location.href = '/';
+              }
             }, 1000); // Redirect after 1 second
           } else {
             setErrorMessage('Login failed, please check your username/password!');

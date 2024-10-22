@@ -1,13 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import { jwtDecode } from 'jwt-decode'; // Correct import for jwt-decode
-import { getCookie } from '../utils/cookies';
-
-interface DecodedToken {
-  role: string;
-}
+import { useRouter } from 'next/navigation';
+import { getCookie, setCookie } from '../utils/cookies';
 
 export default function Dashboard() {
   const router = useRouter();
@@ -15,31 +10,43 @@ export default function Dashboard() {
 
   useEffect(() => {
     const currentUser = getCookie('currentUser');
-    if (!currentUser) {
-      router.push('/login');
+    const userRole = getCookie('userRole');
+    console.log('Current User:', currentUser); // Debugging log
+    console.log('User Role:', userRole); // Debugging log
+
+    if (!currentUser || userRole === 'customer' || userRole === undefined) {
+      console.log('User is not logged in or role is customer/undefined, redirecting to /error');
+      router.push('/error'); // Redirect to an error page or show an error message
       return;
     }
 
-    try {
-      const decodedToken: DecodedToken = jwtDecode(currentUser);
-      if (decodedToken.role !== 'seller') {
-        router.push('/login');
-      } else {
-        setIsAuthorized(true);
-      }
-    } catch (error) {
-      console.error('Invalid token:', error);
-      router.push('/login');
+    if (userRole === 'seller') {
+      console.log('User role is seller, setting isAuthorized to true');
+      setIsAuthorized(true);
+    } else {
+      console.log('User role is not recognized, redirecting to /error');
+      router.push('/error');
     }
   }, [router]);
 
+  const handleLogout = () => {
+    // Clear cookies
+    setCookie('currentUser', '', -1);
+    setCookie('userRole', '', -1);
+    // Clear local storage
+    localStorage.removeItem('token');
+    // Redirect to login page
+    router.push('/login');
+  };
+
   if (!isAuthorized) {
-    return null; 
+    return null; // Or a loading spinner
   }
 
   return (
     <div>
-      "dashboard"
+      <h1>Dashboard</h1>
+      <button onClick={handleLogout} className="bg-red-500 text-white p-2 rounded">Logout</button>
     </div>
   );
 }
