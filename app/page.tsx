@@ -7,11 +7,6 @@ import { setCookie } from './utils/cookies';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 
-const interM = Inter({
-  subsets: ['latin'],
-  weight: '500',
-})
-
 const interR = Inter({
   subsets: ['latin'],
   weight: '400',
@@ -23,7 +18,7 @@ export default function Home() {
   const handleLogout = () => {
     setCookie('currentUser', '', -1);
     setCookie('userRole', '', -1);
-    localStorage.removeItem('token'); 
+    localStorage.removeItem('token');
     router.push('/login');
   };
 
