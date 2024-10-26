@@ -17,12 +17,12 @@ const poppinsR = Poppins({
     weight: '400',
     })
 
-export function NewArrival() {
+export function ArticleHome() {
   return (
     <div className='mx-36 flex justify-center flex-col'>
         <div className='mt-12'>
           <h4 className='text-xl text-blue-800 underline underline-offset-8'>
-            New Arrival
+            Articles
           </h4>
             <div className='flex flex-wrap mt-12 justify-center gap-x-12'>
                 

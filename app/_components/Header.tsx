@@ -62,7 +62,7 @@ export default function Header() {
           <div className="z-100 mx-auto max-w-[95%] px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center xl:hidden">
-                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-[#d4e0c5] hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#85A460]">
+                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-[#38B6FF] hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#0F4A99]">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -142,8 +142,8 @@ export default function Header() {
                   href={item.href}
                   className={`${
                     pathname.endsWith(item.href)
-                      ? "bg-dgreen text-white rounded-lg border-green-900"
-                      : "text-gray-500 border-green-800 hover:text-black lg:border-0 max-lg:active:text-black text-nowrap"
+                      ? "bg-[#0F4A99] text-white rounded-lg "
+                      : "text-gray-500 hover:text-black hover:underline underline-offset-8 max-lg:active:text-black text-nowrap"
                   } text-2xl block px-3 py-2 mx-3 transition-all lg:p-1`}
                 >
                   {item.name}
