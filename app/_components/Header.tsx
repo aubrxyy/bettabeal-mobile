@@ -74,12 +74,14 @@ export default function Header() {
               </div>
               <div className="flex flex-1 items-center justify-center xl:items-stretch xl:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Image src="/logoBB.jpg" alt="Logo" width={150} height={500} className="ml-16 my-4"/>
+                  <a href="/">
+                    <Image src="/logoBB.jpg" alt="Logo" width={150} height={500} className="ml-16 my-4" />
+                  </a>
                 </div>
                 <div className="hidden lg:ml-auto mr-8 xl:block my-auto">
                   <div className="flex space-x-12">
-                    <div className="relative">
-                      <Icon icon="mynaui:search" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" width={20} height={20} />
+                    <div className="relative search-bar">
+                      <Icon icon="mynaui:search" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 icon" width={20} height={20} />
                       <input
                         type="text"
                         className={`block w-full pl-10 pr-24 py-3 border border-blue-600 rounded-3xl shadow-sm placeholder-gray-400 sm:text-sm ${interR.className}`}
@@ -119,7 +121,7 @@ export default function Header() {
                             <Link
                               key={item.name}
                               href={item.href}
-                              className={`${isActive ? "opacity-100 " : "opacity-30 hover:opacity-100 hover:underline-offset-8 hover:underline text-nowrap"} text-[#0F4A99] text-base block mx-3 transition-all my-auto`}
+                              className={`${isActive ? "opacity-100 " : "opacity-30 hover:opacity-100 text-nowrap"} text-[#0F4A99] text-base block mx-3 transition-all my-auto link-underline`}
                             >
                               {item.name}
                             </Link>
