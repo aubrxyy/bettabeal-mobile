@@ -16,6 +16,22 @@ export function Footer() {
             <p className='w-[50ch] text-justify text-sm mt-6 ml-6 leading-7'>
                 Temukan keindahan dan keunikan ikan cupang terbaik di sini. Kami menghadirkan koleksi ikan cupang berkualitas dengan variasi warna memukau dan karakter yang kuat. Dari penggemar pemula hingga kolektor berpengalaman, Bettabeal adalah tempat yang tepat untuk mempercantik akuarium Anda.
             </p>
+            <div className='flex flex-row mt-12 ml-6 space-x-8'>
+                <a href="/">
+                    <Image src="/X-Logo.png" alt="Twitter" width={20} height={20}/>
+                </a>
+                <a href="/">
+                    <Image src="/fb-logo.png" alt="Facebook" width={20} height={20}/>
+                </a>
+                <a href="/">
+                    <Image src="/ig-logo.png" alt="Instagram" width={20} height={20}/>
+                </a>
+                <a href="/">
+                    <Image src="/wa-logo.png" alt="WhatsApp" width={20} height={20}/>
+                </a>
+            </div>
+            
+          
           </div>
           <div>
             <p className={`${inter.className} ml-60`}>Servis</p>
