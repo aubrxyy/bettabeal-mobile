@@ -56,7 +56,7 @@ export function Header() {
   }, [controlHeader]);
 
   return (
-    <Disclosure as="nav" className={`z-1000 sticky top-0 bg-white transition-transform duration-300 ${interM.className} ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
+    <Disclosure as="nav" className={`z-[1000] sticky top-0 bg-white transition-transform duration-300 shadow-xl ${interM.className} ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
       {({ open }) => (
         <>
           <div className="z-100 mx-auto max-w-[95%] px-2 sm:px-6 lg:px-8">
