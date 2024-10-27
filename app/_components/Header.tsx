@@ -1,23 +1,23 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react"
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import Image from "next/image"
+import { useState, useEffect, useCallback } from "react";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { Inter } from 'next/font/google';
 import { Icon } from '@iconify/react';
 
 const interM = Inter({
   subsets: ['latin'],
   weight: '500',
-})
+});
 
 const interR = Inter({
   subsets: ['latin'],
   weight: '400',
-})
+});
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -29,14 +29,14 @@ const navigation = [
   { name: "Profile", href: "/profile" }
 ];
 
-export default function Header() {
+export function Header() {
   const pathname = usePathname();
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-   const controlHeader = useCallback(() => {
+  const controlHeader = useCallback(() => {
     if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
         setShowHeader(false);
       } else {
         setShowHeader(true);
@@ -56,7 +56,7 @@ export default function Header() {
   }, [controlHeader]);
 
   return (
-    <Disclosure as="nav" className={`z-100 sticky top-0 bg-white transition-transform duration-300 ${interM.className} ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
+    <Disclosure as="nav" className={`z-1000 sticky top-0 bg-white transition-transform duration-300 ${interM.className} ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
       {({ open }) => (
         <>
           <div className="z-100 mx-auto max-w-[95%] px-2 sm:px-6 lg:px-8">
@@ -157,4 +157,3 @@ export default function Header() {
     </Disclosure>
   );
 }
-

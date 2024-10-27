@@ -1,13 +1,10 @@
 'use client'
 
 import { useRouter } from 'next/navigation';
-import "./_components/Header";
-import Header from "./_components/Header";
 import { setCookie } from './utils/cookies';
 import { NewArrival } from './_components/NewArrival';
 import { Hero } from './_components/Hero';
 import { ArticleHome } from './_components/ArticleHome';
-import { Footer } from './_components/Footer';
 
 export default function Home() {
   const router = useRouter();
@@ -21,14 +18,12 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <Hero />
       <NewArrival />
       <ArticleHome />
       <div className="py-2">
         <button onClick={handleLogout} className="bg-red-500 text-white p-2 rounded flex mx-auto">Logout</button>
       </div>
-      <Footer />
       
     </>
   );
