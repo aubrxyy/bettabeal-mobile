@@ -1,11 +1,5 @@
 import Image from 'next/image';
 import { Poppins } from 'next/font/google';
-import { Rating } from '@mui/material';
-
-const poppinsB = Poppins({
-    subsets: ['latin'],
-    weight: '700',
-    })
 
 const poppins = Poppins({
   subsets: ['latin'],
