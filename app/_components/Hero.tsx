@@ -19,7 +19,7 @@ export function Hero() {
             </button>
             </div>
           <div className="flex justify-center">
-            <Image src="/herofish1.png" alt="Ikan" width={600} height={600} className="w-full max-w-xs lg:max-w-none lg:w-auto"/>
+            <Image src="/herofish1.png" alt="Ikan" width={500} height={600} className="w-full max-w-xs lg:max-w-none lg:h-[30rem] lg:w-[30rem]"/>
           </div>
         </div>
       </div>

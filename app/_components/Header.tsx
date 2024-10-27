@@ -75,7 +75,7 @@ export default function Header() {
               <div className="flex flex-1 items-center justify-center xl:items-stretch xl:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <a href="/">
-                    <Image src="/logoBB.jpg" alt="Logo" width={150} height={500} className="ml-16 my-4" />
+                    <Image src="/logoBB.jpg" alt="Logo" width={150} height={500} className="ml-12 my-4" />
                   </a>
                 </div>
                 <div className="hidden lg:ml-auto mr-8 xl:block my-auto">
@@ -84,7 +84,7 @@ export default function Header() {
                       <Icon icon="mynaui:search" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 icon" width={20} height={20} />
                       <input
                         type="text"
-                        className={`block w-full pl-10 pr-24 py-3 border border-blue-600 rounded-3xl shadow-sm placeholder-gray-400 sm:text-sm ${interR.className}`}
+                        className={`block w-full pl-10 xl:pr-12 py-3 border border-blue-600 rounded-3xl shadow-sm placeholder-gray-400 sm:text-sm ${interR.className}`}
                         placeholder="Search"
                       />
                     </div>
@@ -134,7 +134,7 @@ export default function Header() {
           </div>
 
           <DisclosurePanel className="xl:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+            <div className="mt-2">
               {navigation.map((item) => (
                 <DisclosureButton
                   key={item.name}
@@ -142,14 +142,15 @@ export default function Header() {
                   href={item.href}
                   className={`${
                     pathname.endsWith(item.href)
-                      ? "bg-[#0F4A99] text-white rounded-lg "
-                      : "text-gray-500 hover:text-black hover:underline underline-offset-8 max-lg:active:text-black text-nowrap"
-                  } text-2xl block px-3 py-2 mx-3 transition-all lg:p-1`}
+                      ? "bg-[#0F4A99] text-white"
+                      : "text-gray-500 hover:text-white hover:bg-gray-400 max-lg:active:text-black text-nowrap"
+                  } text-xl block py-2 px-8 ${interM.className}`}
                 >
                   {item.name}
                 </DisclosureButton>
               ))}
             </div>
+            <div className="w-full bg-[#38B6FF] h-1"></div>
           </DisclosurePanel>
         </>
       )}
