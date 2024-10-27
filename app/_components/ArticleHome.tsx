@@ -14,7 +14,7 @@ const poppinsR = Poppins({
 export function ArticleHome() {
   return (
     <div className='mx-36 flex justify-center flex-col'>
-        <div className='mt-12'>
+        <div className='mt-6 mb-20'>
           <h4 className='text-xl text-blue-800 underline underline-offset-8'>
             Articles
           </h4>
