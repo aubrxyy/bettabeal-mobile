@@ -20,9 +20,9 @@ export function Footer() {
           <div>
             <p className={`${inter.className} ml-60`}>Servis</p>
             <ul className='ml-60 mt-4'>
-                <li className='mt-4 text-sm text-gray-400'><a href="/">Informasi Ikan</a></li>
-                <li className='mt-4 text-sm text-gray-400'><a href="/">Artikel Ikan</a></li>
-                <li className='mt-4 text-sm text-gray-400'><a href="/">Pembayaran</a></li>
+                <li className='mt-4 text-sm text-gray-400 hover:text-white hover:underline underline-offset-4 transition-all'><a href="/">Informasi Ikan</a></li>
+                <li className='mt-4 text-sm text-gray-400 hover:text-white hover:underline underline-offset-4 transition-all'><a href="/">Artikel Ikan</a></li>
+                <li className='mt-4 text-sm text-gray-400 hover:text-white hover:underline underline-offset-4 transition-all'><a href="/">Pembayaran</a></li>
             </ul>
           </div>
         </div>
