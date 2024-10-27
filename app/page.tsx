@@ -6,6 +6,7 @@ import Header from "./_components/Header";
 import { setCookie } from './utils/cookies';
 import { NewArrival } from './_components/NewArrival';
 import { Hero } from './_components/Hero';
+import { ArticleHome } from './_components/ArticleHome';
 
 export default function Home() {
   const router = useRouter();
@@ -22,6 +23,7 @@ export default function Home() {
       <Header />
       <Hero />
       <NewArrival />
+      <ArticleHome />
       
       <div className="pt-4">
         <button onClick={handleLogout} className="bg-red-500 text-white p-2 rounded flex mx-auto">Logout</button>

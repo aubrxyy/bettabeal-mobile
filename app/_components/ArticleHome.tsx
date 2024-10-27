@@ -24,92 +24,32 @@ export function ArticleHome() {
           <h4 className='text-xl text-blue-800 underline underline-offset-8'>
             Articles
           </h4>
-            <div className='flex flex-wrap mt-12 justify-center gap-x-12'>
+            <div className='flex flex-wrap mt-12 justify-center gap-5'>
                 
-              <div className='bg-gray-200 w-full sm:w-48 h-96 mb-8 rounded-lg'>
-                <Image src="/produkfish1.png" alt='Produk 1' width={135} height={200} className='mx-auto mt-6'/>
-                <h1 className={`${poppins.className} ml-4 text-base`}>
-                     Halfmoon
+              <a href='/article1' className='bg-gray-200 w-full sm:w-[49%] h-fit pb-20 rounded-xl'>
+                <Image src="/articledummy.png" alt='Article 1' width={600} height={500} className='mx-auto'/>
+                <h1 className={`${poppins.className} ml-4 mt-4 text-xl`}>
+                     Cupang Giant
                 </h1>
-                <Rating name="read-only" value={5} precision={0.5} size='small' className='ml-3' readOnly />
-                <h2 className={`${poppins.className} ml-4 text-xs`}>
-                    Price range
-                </h2>
-                <p className={`${poppinsR.className} ml-4 text-xs mt-1 text-[#0F4A99]`}>
-                    Rp 2.000 - 3.000 / ekor
+                <p className={`${poppinsR.className} mx-4 text-xs mt-4 text-gray-500`}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam labore dolores similique magnam quidem vero libero exercitationem, illum, nobis corporis quaerat necessitatibus reiciendis ut tempora asperiores, quis inventore placeat ea!
+                    Quasi, corrupti sint cum fugiat consequuntur itaque perspiciatis quod vero optio reprehenderit aliquam! Cupiditate maiores beatae, aliquid itaque pariatur voluptatum et modi nam illo dolore ratione blanditiis esse corrupti sapiente?
+                    Quae animi nihil repellat minima velit eos, accusamus assumenda explicabo quas! Perspiciatis optio non, rerum reiciendis sequi sit dicta, ex temporibus illum, officiis a sint ab cupiditate beatae dignissimos enim.
                 </p>
-                <button className={`${poppinsB.className} text-white bg-[#0F4A99] mt-2 flex rounded-lg px-8 py-[6px] text-sm mx-auto transition-all hover:bg-[#0a356e]`}>
-                    Beli Sekarang
-                </button>
-              </div>
-              
-              <div className='bg-gray-200 w-full sm:w-48 h-96 mb-8 rounded-lg'>
-                <Image src="/produkfish1.png" alt='Produk 1' width={135} height={200} className='mx-auto mt-6'/>
-                <h1 className={`${poppins.className} ml-4 text-base`}>
-                     Halfmoon
+              </a>
+                            
+              <a href='/article2' className='bg-gray-200 w-full sm:w-[49%] h-fit pb-20 rounded-xl'>
+                <Image src="/articledummy.png" alt='Article 1' width={600} height={500} className='mx-auto'/>
+                <h1 className={`${poppins.className} ml-4 mt-4 text-xl`}>
+                     Cupang Giant
                 </h1>
-                <Rating name="read-only" value={4.5} precision={0.5} size='small' className='ml-3' readOnly />
-                <h2 className={`${poppins.className} ml-4 text-xs`}>
-                    Price range
-                </h2>
-                <p className={`${poppinsR.className} ml-4 text-xs mt-1 text-[#0F4A99]`}>
-                    Rp 2.000 - 3.000 / ekor
+                <p className={`${poppinsR.className} mx-4 text-xs mt-4 text-gray-500`}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam labore dolores similique magnam quidem vero libero exercitationem, illum, nobis corporis quaerat necessitatibus reiciendis ut tempora asperiores, quis inventore placeat ea!
+                    Quasi, corrupti sint cum fugiat consequuntur itaque perspiciatis quod vero optio reprehenderit aliquam! Cupiditate maiores beatae, aliquid itaque pariatur voluptatum et modi nam illo dolore ratione blanditiis esse corrupti sapiente?
+                    Quae animi nihil repellat minima velit eos, accusamus assumenda explicabo quas! Perspiciatis optio non, rerum reiciendis sequi sit dicta, ex temporibus illum, officiis a sint ab cupiditate beatae dignissimos enim.
                 </p>
-                <button className={`${poppinsB.className} text-white bg-[#0F4A99] mt-2 flex rounded-lg px-8 py-[6px] text-sm mx-auto transition-all hover:bg-[#0a356e]`}>
-                    Beli Sekarang
-                </button>
-              </div>
-              
-              <div className='bg-gray-200 w-full sm:w-48 h-96 mb-8 rounded-lg'>
-                <Image src="/produkfish1.png" alt='Produk 1' width={135} height={200} className='mx-auto mt-6'/>
-                <h1 className={`${poppins.className} ml-4 text-base`}>
-                     Halfmoon
-                </h1>
-                <Rating name="read-only" value={4.0} precision={0.5} size='small' className='ml-3' readOnly />
-                <h2 className={`${poppins.className} ml-4 text-xs`}>
-                    Price range
-                </h2>
-                <p className={`${poppinsR.className} ml-4 text-xs mt-1 text-[#0F4A99]`}>
-                    Rp 2.000 - 3.000 / ekor
-                </p>
-                <button className={`${poppinsB.className} text-white bg-[#0F4A99] mt-2 flex rounded-lg px-8 py-[6px] text-sm mx-auto transition-all hover:bg-[#0a356e]`}>
-                    Beli Sekarang
-                </button>
-              </div>
-              
-              <div className='bg-gray-200 w-full sm:w-48 h-96 mb-8 rounded-lg'>
-                <Image src="/produkfish1.png" alt='Produk 1' width={135} height={200} className='mx-auto mt-6'/>
-                <h1 className={`${poppins.className} ml-4 text-base`}>
-                     Halfmoon
-                </h1>
-                <Rating name="read-only" value={3.5} precision={0.5} size='small' className='ml-3' readOnly />
-                <h2 className={`${poppins.className} ml-4 text-xs`}>
-                    Price range
-                </h2>
-                <p className={`${poppinsR.className} ml-4 text-xs mt-1 text-[#0F4A99]`}>
-                    Rp 2.000 - 3.000 / ekor
-                </p>
-                <button className={`${poppinsB.className} text-white bg-[#0F4A99] mt-2 flex rounded-lg px-8 py-[6px] text-sm mx-auto transition-all hover:bg-[#0a356e]`}>
-                    Beli Sekarang
-                </button>
-              </div>
-              
-              <div className='bg-gray-200 w-full sm:w-48 h-96 mb-8 rounded-lg'>
-                <Image src="/produkfish1.png" alt='Produk 1' width={135} height={200} className='mx-auto mt-6'/>
-                <h1 className={`${poppins.className} ml-4 text-base`}>
-                     Halfmoon
-                </h1>
-                <Rating name="read-only" value={3} precision={0.5} size='small' className='ml-3' readOnly />
-                <h2 className={`${poppins.className} ml-4 text-xs`}>
-                    Price range
-                </h2>
-                <p className={`${poppinsR.className} ml-4 text-xs mt-1 text-[#0F4A99]`}>
-                    Rp 2.000 - 3.000 / ekor
-                </p>
-                <button className={`${poppinsB.className} text-white bg-[#0F4A99] mt-2 flex rounded-lg px-8 py-[6px] text-sm mx-auto transition-all hover:bg-[#0a356e]`}>
-                    Beli Sekarang
-                </button>
-              </div>
+              </a>
+                            
               
           </div>
         </div>
