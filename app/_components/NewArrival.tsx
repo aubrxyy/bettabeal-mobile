@@ -31,7 +31,7 @@ export function NewArrival() {
                 <h1 className={`${poppins.className} ml-4 text-base`}>
                      Halfmoon
                 </h1>
-                <Rating name="read-only" value={5} precision={0.5} size='small' className='ml-  3' readOnly />
+                <Rating name="read-only" value={5} precision={0.5} size='small' className='ml-3' readOnly />
                 <h2 className={`${poppins.className} ml-4 text-xs`}>
                     Price range
                 </h2>
