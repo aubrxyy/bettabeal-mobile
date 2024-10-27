@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
-import { Footer } from "./_components/Footer";
-import { Header } from "./_components/Header";
 import "./globals.css";
 import Template from "./template";
+import ClientLayout from "./clientlayout";
 
 const interR = Inter({
   subsets: ['latin'],
   weight: '400',
-})
-
+});
 
 export const metadata: Metadata = {
   title: "BettaBeal",
@@ -23,14 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${interR.className} antialiased`}
-      >
+      <body className={`${interR.className} antialiased`}>
         <Template>
-          <Header />
-          {children}
+          <ClientLayout>
+            {children}
+          </ClientLayout>
         </Template>
-        <Footer />
       </body>
     </html>
   );
