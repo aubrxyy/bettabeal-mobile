@@ -1,15 +1,17 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { getCookie } from '../utils/cookies';
 import Header from './Header';
 import Navbar from './Navbar';
-import { getCookie } from '../utils/cookies';
 
 interface Seller {
   email: string;
 }
 
 export default function Dashboard() {
+  const router = useRouter();
   const [userData, setUserData] = useState<Seller | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
 
@@ -28,8 +30,14 @@ export default function Dashboard() {
     }
   }, [userId]);
 
+  useEffect(() => {
+    if (!userData) {
+      router.push('/error');
+    }
+  }, [userData, router]);
+
   if (!userData) {
-    return <div>Loading...</div>;
+    return null;
   }
 
   return (
