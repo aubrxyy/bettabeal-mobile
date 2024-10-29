@@ -39,6 +39,11 @@ export default function Dashboard() {
       <div className="flex-1" style={{ background: 'linear-gradient(to right, #1DACFE 45%, #7ec9f2 94%)' }}>
         <div className="p-4 mt-[4.63rem]">
           Dashboard
+          {userData && (
+        <span className="ml-4 text-gray-700">
+          {userData.email}
+        </span>
+      )}
         </div>
       </div>
     </div>

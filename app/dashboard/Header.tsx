@@ -7,14 +7,10 @@ import { getCookie, setCookie } from '../utils/cookies';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
 
-interface Seller {
-    email: string;
-}
 
 export default function Header() {
     const router = useRouter();
     const [isAuthorized, setIsAuthorized] = useState(false);
-    const [userData, setUserData] = useState<Seller | null>(null);
     const [userId, setUserId] = useState<string | null>(null);
     const [username, setUsername] = useState<string | null>(null);
 
@@ -42,7 +38,6 @@ export default function Header() {
         if (userId) {
             fetch(`https://api-bettabeal.dgeo.id/api/sellers/${userId}`)
                 .then(response => response.json())
-                .then(data => setUserData(data.seller))
                 .catch(error => console.error('Error fetching user data:', error));
         }
     }, [userId]);
@@ -74,15 +69,11 @@ return (
           />
         </div>
       </div>
-      <div>z=
+      <div>
         <span className="ml-4 text-gray-700">
           {username}
       </span>
-      {userData && (
-        <span className="ml-4 text-gray-700">
-          {userData.email}
-        </span>
-      )}
+      
       </div>
       <div>
         <button onClick={handleLogout} className="bg-red-500 text-white p-2 rounded">Logout</button>
