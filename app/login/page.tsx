@@ -44,6 +44,9 @@ export default function Login() {
             localStorage.setItem('token', data.token);
             setCookie('currentUser', data.token, 1);
             setCookie('userRole', data.user.role, 1);
+            setCookie('userId', data.user.user_id, 1);
+            setCookie('username', data.user.username, 1);
+
             if (data.user.role === 'seller') {
               setSuccessMessage('Login successful! Redirecting to dashboard.');
             } else if (data.user.role === 'customer') {
@@ -57,7 +60,7 @@ export default function Login() {
               } else if (data.user.role === 'customer') {
                 window.location.href = '/';
               }
-            }, 1000); // Redirect after 1 second
+            }, 1000);
           } else {
             setErrorMessage('Login failed, please check your username/password!');
           }
