@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddShipping"
+    android:id="@+id/addship"
+    android:background="@drawable/background_app">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Add Shipping Address"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintDimensionRatio="1:0"
+        android:autoSizeMaxTextSize="24dp"
+        android:autoSizeMinTextSize="18dp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintLeft_toLeftOf="@id/vertvkiri"
+        app:layout_constraintRight_toRightOf="@id/vertvkanan"
+        app:layout_constraintTop_toBottomOf="@id/horatstv"
+        app:layout_constraintBottom_toTopOf="@id/horbwhtv"
+        />
+
+    <ImageButton
+        android:id="@+id/btnbackship"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_white"
+        android:src="@drawable/icon_arrow_back"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintLeft_toLeftOf="@id/verimgbtnkiri"
+        app:layout_constraintRight_toRightOf="@id/verimgbtnkanan"
+        app:layout_constraintTop_toBottomOf="@id/horatsimgbtn"
+        app:layout_constraintBottom_toTopOf="@id/horbwhimgbtn"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        app:layout_constraintDimensionRatio="1:0"
+        android:autoSizeMaxTextSize="16dp"
+        android:autoSizeMinTextSize="14dp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintLeft_toLeftOf="@id/vertvnamakiri"
+        app:layout_constraintRight_toRightOf="@id/vertvnamakanan"
+        app:layout_constraintTop_toBottomOf="@id/hornamaats"
+        app:layout_constraintBottom_toTopOf="@id/hornamabwh"
+        />
+
+    <ImageView
+        android:id="@+id/imvbg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle_settings"
+        app:layout_constraintLeft_toLeftOf="@id/verlistkiri"
+        app:layout_constraintRight_toRightOf="@id/verlistkanan"
+        app:layout_constraintTop_toBottomOf="@id/horatslist1"
+        app:layout_constraintBottom_toTopOf="@id/horbwhlist1"
+        />
+
+    <EditText
+        android:id="@+id/etnama"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="14sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:hint="Enter name"
+        android:textColor="@color/darkgrey"
+        android:fontFamily="@font/poppins_regular"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="1:0"
+        app:layout_constraintTop_toBottomOf="@id/horatsnama"
+        app:layout_constraintBottom_toTopOf="@id/horbwhnama"
+        app:layout_constraintLeft_toLeftOf="@id/vernamakiri"
+        app:layout_constraintRight_toRightOf="@id/vernamakanan"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Address"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        app:layout_constraintDimensionRatio="1:0"
+        android:autoSizeMaxTextSize="16dp"
+        android:autoSizeMinTextSize="14dp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintLeft_toLeftOf="@id/vertvnamakiri"
+        app:layout_constraintRight_toRightOf="@id/vertvnamakanan"
+        app:layout_constraintTop_toBottomOf="@id/horaddressats"
+        app:layout_constraintBottom_toTopOf="@id/horaddressbwh"
+        />
+
+    <ImageView
+        android:id="@+id/imvbgaddress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle_settings"
+        app:layout_constraintLeft_toLeftOf="@id/verlistkiri"
+        app:layout_constraintRight_toRightOf="@id/verlistkanan"
+        app:layout_constraintTop_toBottomOf="@id/horatslist2"
+        app:layout_constraintBottom_toTopOf="@id/horbwhlist2"
+        />
+
+    <EditText
+        android:id="@+id/etaddress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="14sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:hint="Enter address"
+        android:textColor="@color/darkgrey"
+        android:fontFamily="@font/poppins_regular"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="1:0"
+        app:layout_constraintTop_toBottomOf="@id/horetatsadrs"
+        app:layout_constraintBottom_toTopOf="@id/horetbwhadrs"
+        app:layout_constraintLeft_toLeftOf="@id/vernamakiri"
+        app:layout_constraintRight_toRightOf="@id/vernamakanan"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertvkiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertvkanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horatstv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horbwhtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verimgbtnkiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verimgbtnkanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horatsimgbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horbwhimgbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertvnamakanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertvnamakiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hornamaats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hornamabwh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verlistkanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verlistkiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horatslist1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horbwhlist1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horatsnama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horbwhnama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vernamakiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vernamakanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horaddressats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horaddressbwh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horatslist2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horbwhlist2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horetatsadrs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horetbwhadrs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

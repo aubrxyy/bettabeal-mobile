@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/btnatas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1"
+        android:background="@drawable/shape_white"
+        android:src="@drawable/icon_burger_menu"
+        app:layout_constraintBottom_toTopOf="@+id/hormenubawah"
+        app:layout_constraintStart_toStartOf="@id/verburgerkiri"
+        app:layout_constraintEnd_toEndOf="@id/verburgerkanan"
+        app:layout_constraintTop_toTopOf="@+id/hormenuatas" />
+
+    <TextView
+        android:id="@+id/tvhome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Home"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/hormenubawah"
+        app:layout_constraintStart_toStartOf="@id/vertvkiri"
+        app:layout_constraintEnd_toEndOf="@id/vertvkanan"
+        app:layout_constraintTop_toBottomOf="@+id/hormenuatas" />
+
+    <ImageButton
+        android:id="@+id/btncart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_white"
+        android:src="@drawable/icon_shopping_cart"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintBottom_toTopOf="@id/hormenubawah"
+        app:layout_constraintStart_toStartOf="@id/verbtnkiri"
+        app:layout_constraintEnd_toEndOf="@id/verbtnkanan"
+        app:layout_constraintTop_toBottomOf="@+id/hormenuatas" />
+
+    <ImageButton
+        android:id="@+id/btnatassmpg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="7dp"
+        app:layout_constraintDimensionRatio="1"
+        android:background="@drawable/shape_white"
+        android:src="@drawable/icon_notifications"
+        app:layout_constraintBottom_toTopOf="@id/hormenubawah"
+        app:layout_constraintStart_toStartOf="@id/verbtnkanan"
+        app:layout_constraintEnd_toEndOf="@id/verbtnnotifkanan"
+        app:layout_constraintTop_toBottomOf="@+id/hormenuatas" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Most Popular"
+        android:textColor="@color/black"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="15sp"
+        android:autoSizeMaxTextSize="20sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/hormostbawah"
+        app:layout_constraintStart_toStartOf="@id/verburgerkiri"
+        app:layout_constraintEnd_toEndOf="@id/vermostkanan"
+        app:layout_constraintTop_toBottomOf="@+id/hormostatas" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_most_popular"
+        app:layout_constraintBottom_toTopOf="@id/hormostbawah"
+        app:layout_constraintStart_toStartOf="@id/verbtnkanan"
+        app:layout_constraintEnd_toEndOf="@id/verbtnnotifkanan"
+        app:layout_constraintTop_toBottomOf="@+id/hormostatas" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Latest Articles"
+        android:textColor="@color/black"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="15sp"
+        android:autoSizeMaxTextSize="20sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/horlatebawah"
+        app:layout_constraintStart_toStartOf="@id/verburgerkiri"
+        app:layout_constraintEnd_toEndOf="@id/vermostkanan"
+        app:layout_constraintTop_toBottomOf="@+id/horlateatas" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_most_popular"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintBottom_toTopOf="@id/horlatebawah"
+        app:layout_constraintStart_toStartOf="@id/verbtnkanan"
+        app:layout_constraintEnd_toEndOf="@id/verbtnnotifkanan"
+        app:layout_constraintTop_toBottomOf="@+id/horlateatas" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hormenuatas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hormenubawah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verburgerkiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verburgerkanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertvkiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertvkanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verbtnkiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.69" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verbtnkanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verbtnnotifkanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vermostkanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hormostatas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hormostbawah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horlateatas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.64"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horlatebawah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app"
+    tools:context=".Sign_in">
+
+    <ImageView
+        android:id="@+id/imvsign"
+        android:layout_width="320dp"
+        android:layout_height="420dp"
+        android:background="@drawable/bgsign_in_form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/logoapp"
+        app:layout_constraintLeft_toLeftOf="@id/imvsign"
+        app:layout_constraintRight_toRightOf="@id/imvsign"
+        app:layout_constraintTop_toBottomOf="@id/horizontalbawah" />
+
+    <TextView
+        android:id="@+id/tvsignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Sign In"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imvsign" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/username"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email_username"
+        android:drawableStart="@drawable/icon_username"
+        android:drawablePadding="25dp"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Username"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/grey"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvsignin" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/email_username"
+        android:drawableStart="@drawable/iconlock"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Password"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/grey"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password">
+
+        <Button
+            android:id="@+id/sign_in_button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gradient_sign"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="OR"
+                android:textColor="@color/grey" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/grey" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/signup"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Sign up"
+            android:textAllCaps="false"
+            android:textColor="@color/grey" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalbawah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
