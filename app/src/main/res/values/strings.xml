@@ -14,4 +14,10 @@
     <string name="title_activity_home_app">Home_app</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Shipping Status -->
+    <string name="status_pending">Pending</string>
+    <string name="status_shipped">Shipped</string>
+    <string name="status_delivered">Delivered</string>
+    <string name="status_cancelled">Cancelled</string>
 </resources>

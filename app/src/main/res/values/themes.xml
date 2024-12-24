@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Bettabeal" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:textViewStyle">@style/BoldBlackText</item>
     </style>
 
     <style name="Theme.Bettabeal" parent="Base.Theme.Bettabeal" />
@@ -15,4 +15,8 @@
     <style name="Theme.Bettabeal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Bettabeal.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.YourApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textViewStyle">@style/BoldBlackText</item>
+    </style>
 </resources>

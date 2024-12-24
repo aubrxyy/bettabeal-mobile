@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BoldBlackText">
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:alpha">1.0</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources> 

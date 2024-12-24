@@ -37,10 +37,12 @@
         app:layout_constraintBottom_toTopOf="@id/horbwhimg"
         />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/pic_profile_account"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/white"
         app:layout_constraintDimensionRatio="1.2"
         app:layout_constraintBottom_toTopOf="@id/horbwhprof"
         app:layout_constraintEnd_toStartOf="@+id/verimgkananprof"
@@ -50,6 +52,7 @@
         app:layout_constraintTop_toBottomOf="@id/horatsimgprof" />
 
     <TextView
+        android:id="@+id/username_text"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="Asep"
@@ -68,6 +71,7 @@
         />
 
     <TextView
+        android:id="@+id/email_text"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="asep@gmail.com"
@@ -85,97 +89,50 @@
         app:layout_constraintRight_toRightOf="@id/vertvkanan"
         />
 
-    <TextView
+    <Button
         android:id="@+id/address"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="Address"
+        android:drawableEnd="@drawable/icon_arrow_account"
+        android:background="?android:attr/selectableItemBackground"
         android:autoSizeMaxTextSize="20dp"
         android:autoSizeMinTextSize="18dp"
         android:autoSizeTextType="uniform"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:textAllCaps="false"
         android:gravity="center_vertical"
-        app:layout_constraintDimensionRatio="3"
+        app:layout_constraintDimensionRatio="3:0"
         app:layout_constraintTop_toBottomOf="@id/horatsadrs"
         app:layout_constraintLeft_toLeftOf="@id/verimgkiriadrs"
         app:layout_constraintRight_toRightOf="@id/verimgkananadrs"
         app:layout_constraintBottom_toTopOf="@id/horbwhadrs"
         />
 
-    <ImageButton
-        android:id="@+id/btnaddress"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/icon_arrow_account"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintLeft_toLeftOf="@id/verimgkiritmbl"
-        app:layout_constraintRight_toRightOf="@id/verimgkanantmbl"
-        app:layout_constraintTop_toBottomOf="@id/horatsbtn"
-        app:layout_constraintBottom_toTopOf="@id/horbwhbtn"
-        />
 
-    <TextView
+    <Button
         android:id="@+id/myorders"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="My orders"
+        android:drawableEnd="@drawable/icon_arrow_account"
+        android:background="?android:attr/selectableItemBackground"
         android:autoSizeMaxTextSize="20dp"
         android:autoSizeMinTextSize="18dp"
         android:autoSizeTextType="uniform"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:gravity="center_vertical"
-        app:layout_constraintDimensionRatio="3"
+        android:textAllCaps="false"
+        app:layout_constraintDimensionRatio="3:0"
         app:layout_constraintTop_toBottomOf="@id/horatsorders"
         app:layout_constraintLeft_toLeftOf="@id/vermyorderskiri"
         app:layout_constraintRight_toRightOf="@id/verimgkananadrs"
         app:layout_constraintBottom_toTopOf="@id/horbwhorders"
         />
 
-    <ImageButton
-        android:id="@+id/btnmyorders"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/icon_arrow_account"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintLeft_toLeftOf="@id/verimgkiritmbl"
-        app:layout_constraintRight_toRightOf="@id/verimgkanantmbl"
-        app:layout_constraintTop_toBottomOf="@id/horatsorderstmbl"
-        app:layout_constraintBottom_toTopOf="@id/horbwhorderstmbl"
-        />
-
-    <TextView
-        android:id="@+id/payment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="Payment method"
-        android:autoSizeMaxTextSize="20dp"
-        android:autoSizeMinTextSize="18dp"
-        android:autoSizeTextType="uniform"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:gravity="center_vertical"
-        app:layout_constraintDimensionRatio="6"
-        app:layout_constraintTop_toBottomOf="@id/horatspayment"
-        app:layout_constraintLeft_toLeftOf="@id/verpaymentkiri"
-        app:layout_constraintRight_toRightOf="@id/verpaymentkanan"
-        app:layout_constraintBottom_toTopOf="@id/horbwhpayment"
-        />
-
-    <ImageButton
-        android:id="@+id/btnpayment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/icon_arrow_account"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintLeft_toLeftOf="@id/verimgkiritmbl"
-        app:layout_constraintRight_toRightOf="@id/verimgkanantmbl"
-        app:layout_constraintTop_toBottomOf="@id/horatspaymenttmbl"
-        app:layout_constraintBottom_toTopOf="@id/horbwhpaymenttmbl"
-        />
-
-    <TextView
+    <Button
         android:id="@+id/settings"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -185,25 +142,30 @@
         android:autoSizeTextType="uniform"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:background="?android:attr/selectableItemBackground"
         android:gravity="center_vertical"
-        app:layout_constraintDimensionRatio="3"
+        android:textAllCaps="false"
+        android:drawableEnd="@drawable/icon_arrow_account"
+        app:layout_constraintDimensionRatio="3:0"
         app:layout_constraintTop_toBottomOf="@id/horatssettings"
-        app:layout_constraintLeft_toLeftOf="@id/versettingskiri"
-        app:layout_constraintRight_toRightOf="@id/versettingskanan"
+        app:layout_constraintLeft_toLeftOf="@id/vermyorderskiri"
+        app:layout_constraintRight_toRightOf="@id/verimgkananadrs"
         app:layout_constraintBottom_toTopOf="@id/horbwhsettings"
         />
 
-    <ImageButton
-        android:id="@+id/btnsettings"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/icon_arrow_account"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintLeft_toLeftOf="@id/verimgkiritmbl"
-        app:layout_constraintRight_toRightOf="@id/verimgkanantmbl"
-        app:layout_constraintTop_toBottomOf="@id/horatssettingstmbl"
-        app:layout_constraintBottom_toTopOf="@id/horbwhsettingstmbl"
-        />
+    <Button
+        android:id="@+id/sign_out_btn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/gradient_profile"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Sign out"
+        app:layout_constraintLeft_toLeftOf="@id/verimgkiri"
+        app:layout_constraintRight_toRightOf="@id/verimgkanan"
+        app:layout_constraintTop_toBottomOf="@id/horbwhimg"
+        app:layout_constraintBottom_toTopOf="@id/horbwhsign"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertvkiri"
@@ -252,7 +214,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.72" />
+        app:layout_constraintGuide_percent="0.68" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/verimgkananprof"
@@ -315,161 +277,64 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.14" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/verimgkananadrs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.88" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horatsadrs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.27" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horbwhadrs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.37" />
+        app:layout_constraintGuide_percent="0.38" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verimgkiritmbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verimgkanantmbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horatsbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horbwhbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.34" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vermyorderskiri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.14" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horatsorders"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.38" />
+        app:layout_constraintGuide_percent="0.4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horbwhorders"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.46" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horatsorderstmbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horbwhorderstmbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.44" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horatspayment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horbwhpayment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.56" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verpaymentkanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.56" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verpaymentkiri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.14" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horatspaymenttmbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horbwhpaymenttmbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.54" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horatssettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.58" />
+        app:layout_constraintGuide_percent="0.54" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horbwhsettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.66" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/versettingskanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.36" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/versettingskiri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.14" />
+        app:layout_constraintGuide_percent="0.64" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horatssettingstmbl"
@@ -484,6 +349,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horbwhsign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

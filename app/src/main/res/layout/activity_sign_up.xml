@@ -16,7 +16,8 @@
         app:layout_constraintBottom_toTopOf="@id/horbwh"
         app:layout_constraintLeft_toLeftOf="@id/verkiri"
         app:layout_constraintRight_toRightOf="@id/verkanan"
-        app:layout_constraintTop_toBottomOf="@+id/horats" />
+        app:layout_constraintTop_toBottomOf="@+id/horats"
+        />
 
     <TextView
         android:id="@+id/tvcreate"
@@ -31,14 +32,34 @@
         android:textColor="@color/black"
         android:textFontWeight="700"
         app:layout_constraintBottom_toTopOf="@id/tvhorbwh"
-        app:layout_constraintDimensionRatio="4"
+        app:layout_constraintDimensionRatio="6"
         app:layout_constraintLeft_toLeftOf="@id/tvverkiri"
         app:layout_constraintRight_toRightOf="@id/tvverkanan"
         app:layout_constraintTop_toTopOf="@+id/tvhorats" />
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullname"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/email_username"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Fullname"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textColorHint="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintDimensionRatio="6"
+            app:layout_constraintBottom_toTopOf="@id/ethoruser"
+            app:layout_constraintTop_toBottomOf="@id/tvhorbwh"
+            app:layout_constraintLeft_toLeftOf="@id/etverkiri"
+            app:layout_constraintRight_toRightOf="@id/etverkanan"
+            />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/username"
+        android:textColor="@color/black"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/email_username"
@@ -51,14 +72,15 @@
         android:paddingLeft="20dp"
         android:textColorHint="@color/grey"
         android:textSize="14sp"
-        app:layout_constraintDimensionRatio="5.2:1"
-        app:layout_constraintBottom_toTopOf="@id/ethoruser"
-        app:layout_constraintTop_toBottomOf="@id/tvhorbwh"
+        app:layout_constraintDimensionRatio="6"
+        app:layout_constraintBottom_toTopOf="@id/ethoruserbwh"
+        app:layout_constraintTop_toBottomOf="@id/ethoruser"
         app:layout_constraintLeft_toLeftOf="@id/etverkiri"
         app:layout_constraintRight_toRightOf="@id/etverkanan" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/birth"
+        android:textColor="@color/black"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/email_username"
@@ -69,15 +91,16 @@
         android:paddingLeft="18dp"
         android:textColorHint="@color/grey"
         android:textSize="14sp"
-        app:layout_constraintDimensionRatio="5.2:1"
+        app:layout_constraintDimensionRatio="6"
         app:layout_constraintBottom_toTopOf="@id/ethordate"
         app:layout_constraintLeft_toLeftOf="@id/etverkiri"
         app:layout_constraintRight_toRightOf="@id/etverkanan"
-        app:layout_constraintTop_toBottomOf="@id/ethoruser" />
+        app:layout_constraintTop_toBottomOf="@id/ethoruserbwh" />
 
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/phone"
+        android:textColor="@color/black"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/email_username"
@@ -90,14 +113,14 @@
         android:textColorHint="@color/grey"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@id/ethorphone"
-        app:layout_constraintDimensionRatio="5.2:1"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintDimensionRatio="6"
         app:layout_constraintLeft_toLeftOf="@id/etverkiri"
         app:layout_constraintRight_toRightOf="@id/etverkanan"
         app:layout_constraintTop_toBottomOf="@id/ethordate" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
+        android:textColor="@color/black"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/email_username"
@@ -109,7 +132,7 @@
         android:paddingLeft="20dp"
         android:textColorHint="@color/grey"
         android:textSize="14sp"
-        app:layout_constraintDimensionRatio="5.2:1"
+        app:layout_constraintDimensionRatio="6"
         app:layout_constraintBottom_toTopOf="@id/ethoremail"
         app:layout_constraintLeft_toLeftOf="@id/etverkiri"
         app:layout_constraintRight_toRightOf="@id/etverkanan"
@@ -117,6 +140,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/password"
+        android:textColor="@color/black"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/email_username"
@@ -128,7 +152,7 @@
         android:paddingLeft="20dp"
         android:textColorHint="@color/grey"
         android:textSize="14sp"
-        app:layout_constraintDimensionRatio="5.2:1"
+        app:layout_constraintDimensionRatio="6"
         app:layout_constraintBottom_toTopOf="@id/ethorpass"
         app:layout_constraintLeft_toLeftOf="@id/etverkiri"
         app:layout_constraintRight_toRightOf="@id/etverkanan"
@@ -136,6 +160,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/konfirm_pass"
+        android:textColor="@color/black"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/email_username"
@@ -147,7 +172,7 @@
         android:paddingLeft="20dp"
         android:textColorHint="@color/grey"
         android:textSize="14sp"
-        app:layout_constraintDimensionRatio="5.2:1"
+        app:layout_constraintDimensionRatio="6"
         app:layout_constraintBottom_toTopOf="@id/ethorconpass"
         app:layout_constraintLeft_toLeftOf="@id/etverkiri"
         app:layout_constraintRight_toRightOf="@id/etverkanan"
@@ -163,7 +188,7 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="14sp"
-        app:layout_constraintDimensionRatio="7:1.3"
+        app:layout_constraintDimensionRatio="6"
         app:layout_constraintBottom_toTopOf="@id/btnhor"
         app:layout_constraintLeft_toLeftOf="@id/etverkiri"
         app:layout_constraintRight_toRightOf="@id/etverkanan"
@@ -201,21 +226,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.08" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/verkanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.94" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.08" />
+        app:layout_constraintGuide_percent="0.06" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horbwh"
@@ -250,42 +275,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.16" />
+        app:layout_constraintGuide_percent="0.12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/etverkiri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.14" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/etverkanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.88" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ethoruser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24" />
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ethoruserbwh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ethordate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.34" />
+        app:layout_constraintGuide_percent="0.36" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ethorphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.42" />
+        app:layout_constraintGuide_percent="0.44" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ethoremail"
@@ -306,7 +338,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7" />
+        app:layout_constraintGuide_percent="0.68" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/btnhor"
@@ -348,7 +380,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.77" />
+        app:layout_constraintGuide_percent="0.76" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

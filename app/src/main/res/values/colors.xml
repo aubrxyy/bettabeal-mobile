@@ -2,7 +2,22 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="grey">#A8A8A8</color>
+    <color name="grey">#757575</color>
     <color name="darkgrey">#858585</color>
     <color name="red">#FF0000</color>
+    <color name="blue">#2196F3</color>
+    <color name="biru_tua">#0f4a99</color>
+    <color name="lightBlue">#B3E5FC</color>
+    <color name="gray">#B0BEC5</color>
+    <color name="green">#5ACC5F</color>
+    <color name="blue_light">#E6F3FF</color>
+    <color name="blue_primary">#2196F3</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="yellow">#FFD700</color>
+
+    <color name="status_delivered">#4CAF50</color>
+    <color name="status_pending">#FFC107</color>
+    <color name="status_shipped">#2196F3</color>
+    <color name="status_cancelled">#F44336</color>
+    <color name="divider">#E0E0E0</color>
 </resources>

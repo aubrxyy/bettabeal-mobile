@@ -42,6 +42,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/username"
+        android:textColor="@color/black"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginTop="25dp"
@@ -50,39 +51,70 @@
         android:drawablePadding="25dp"
         android:fontFamily="@font/poppins_regular"
         android:hint="Username"
+        android:inputType="text"
         android:paddingLeft="20dp"
+        android:paddingEnd="50dp"
         android:textColorHint="@color/grey"
-        android:textSize="13dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvsignin" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/password"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/email_username"
-        android:drawableStart="@drawable/iconlock"
-        android:drawablePadding="20dp"
-        android:fontFamily="@font/poppins_regular"
-        android:hint="Password"
-        android:paddingLeft="20dp"
-        android:textColorHint="@color/grey"
-        android:textSize="13dp"
+    <FrameLayout
+        android:id="@+id/framepass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/username" />
+        app:layout_constraintTop_toBottomOf="@id/username"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:textColor="@color/black"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/email_username"
+            android:drawableStart="@drawable/iconlock"
+            android:drawablePadding="20dp"
+            android:paddingEnd="50dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:textColorHint="@color/grey"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username"/>
+
+        <CheckBox
+            android:id="@+id/checkpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:layout_marginLeft="17dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show password"
+            android:textSize="15dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginLeft="68dp"
+            />
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password">
+        app:layout_constraintTop_toBottomOf="@id/framepass">
 
         <Button
             android:id="@+id/sign_in_button"
@@ -124,6 +156,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnsignup"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:background="@drawable/signup"

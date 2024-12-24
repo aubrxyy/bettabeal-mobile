@@ -2,227 +2,196 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_app"
-    tools:context=".HomeFragment">
+    tools:context=".Home"
+    android:background="@drawable/background_app">
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp"
+        android:clipToPadding="false">
 
-    <ImageButton
-        android:id="@+id/btnatas"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1"
-        android:background="@drawable/shape_white"
-        android:src="@drawable/icon_burger_menu"
-        app:layout_constraintBottom_toTopOf="@+id/hormenubawah"
-        app:layout_constraintStart_toStartOf="@id/verburgerkiri"
-        app:layout_constraintEnd_toEndOf="@id/verburgerkanan"
-        app:layout_constraintTop_toTopOf="@+id/hormenuatas" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvhome"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Home"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:autoSizeTextType="uniform"
-        android:autoSizeMinTextSize="12sp"
-        android:autoSizeMaxTextSize="22sp"
-        app:layout_constraintBottom_toTopOf="@id/hormenubawah"
-        app:layout_constraintStart_toStartOf="@id/vertvkiri"
-        app:layout_constraintEnd_toEndOf="@id/vertvkanan"
-        app:layout_constraintTop_toBottomOf="@+id/hormenuatas" />
+            <!-- Header Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/btncart"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/shape_white"
-        android:src="@drawable/icon_shopping_cart"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintBottom_toTopOf="@id/hormenubawah"
-        app:layout_constraintStart_toStartOf="@id/verbtnkiri"
-        app:layout_constraintEnd_toEndOf="@id/verbtnkanan"
-        app:layout_constraintTop_toBottomOf="@+id/hormenuatas" />
+                <ImageButton
+                    android:id="@+id/btnNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_margin="1dp"
+                    android:background="@null"
+                    app:srcCompat="@drawable/notification" />
 
-    <ImageButton
-        android:id="@+id/btnatassmpg"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="7dp"
-        app:layout_constraintDimensionRatio="1"
-        android:background="@drawable/shape_white"
-        android:src="@drawable/icon_notifications"
-        app:layout_constraintBottom_toTopOf="@id/hormenubawah"
-        app:layout_constraintStart_toStartOf="@id/verbtnkanan"
-        app:layout_constraintEnd_toEndOf="@id/verbtnnotifkanan"
-        app:layout_constraintTop_toBottomOf="@+id/hormenuatas" />
+                <TextView
+                    android:id="@+id/tvHomeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="Home"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Most Popular"
-        android:textColor="@color/black"
-        android:autoSizeTextType="uniform"
-        android:autoSizeMinTextSize="15sp"
-        android:autoSizeMaxTextSize="20sp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/hormostbawah"
-        app:layout_constraintStart_toStartOf="@id/verburgerkiri"
-        app:layout_constraintEnd_toEndOf="@id/vermostkanan"
-        app:layout_constraintTop_toBottomOf="@+id/hormostatas" />
+                <ImageButton
+                    android:id="@+id/btnCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_margin="1dp"
+                    android:background="@null"
+                    app:srcCompat="@drawable/cart" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1"
-        android:background="@android:color/transparent"
-        android:src="@drawable/icon_most_popular"
-        app:layout_constraintBottom_toTopOf="@id/hormostbawah"
-        app:layout_constraintStart_toStartOf="@id/verbtnkanan"
-        app:layout_constraintEnd_toEndOf="@id/verbtnnotifkanan"
-        app:layout_constraintTop_toBottomOf="@+id/hormostatas" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Latest Articles"
-        android:textColor="@color/black"
-        android:autoSizeTextType="uniform"
-        android:autoSizeMinTextSize="15sp"
-        android:autoSizeMaxTextSize="20sp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/horlatebawah"
-        app:layout_constraintStart_toStartOf="@id/verburgerkiri"
-        app:layout_constraintEnd_toEndOf="@id/vermostkanan"
-        app:layout_constraintTop_toBottomOf="@+id/horlateatas" />
+            <!-- Banner/Iklan ScrollView -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/icon_most_popular"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintBottom_toTopOf="@id/horlatebawah"
-        app:layout_constraintStart_toStartOf="@id/verbtnkanan"
-        app:layout_constraintEnd_toEndOf="@id/verbtnnotifkanan"
-        app:layout_constraintTop_toBottomOf="@+id/horlateatas" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/hormenuatas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05"/>
+                    <ImageView
+                        android:id="@+id/bannerImage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        app:srcCompat="@drawable/iklan" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/hormenubawah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.12" />
+                    <ImageView
+                        android:id="@+id/bannerImage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        app:srcCompat="@drawable/iklan" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verburgerkiri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.06" />
+                    <ImageView
+                        android:id="@+id/bannerImage3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        app:srcCompat="@drawable/iklan" />
+                </LinearLayout>
+            </HorizontalScrollView>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verburgerkanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.18" />
+            <!-- Products Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertvkiri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4" />
+                <TextView
+                    android:id="@+id/tvProducts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="start"
+                    android:text="Products"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertvkanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.6" />
+                <ImageButton
+                    android:id="@+id/imagebtn_products"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_margin="1dp"
+                    android:background="@null"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/button_back" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verbtnkiri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.69" />
+            </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verbtnkanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.82" />
+            <!-- Products ScrollView -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:paddingEnd="16dp">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verbtnnotifkanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.96" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProducts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vermostkanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.45" />
+            </HorizontalScrollView>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/hormostatas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/hormostbawah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32" />
+                <TextView
+                    android:id="@id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="start"
+                    android:text="Article"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horlateatas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.64"/>
+                <ImageButton
+                    android:id="@+id/imagebtn_article"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_margin="1dp"
+                    android:background="@null"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/button_back"
+                    android:layout_width="wrap_content"/>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horlatebawah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.72" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvArticles"
+                    android:layout_width="match_parent"
+                    android:layout_height="620dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="true"
+                    android:overScrollMode="never"/>
+</LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

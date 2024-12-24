@@ -1,66 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SearchFragment"
-    android:background="@drawable/background_app"
-    >
+    android:contextClickable="false"
+    android:background="@drawable/background_app">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <!-- pembungkus untuk semua bagian yg ada -->
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="30dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_margin="1dp"
+                android:background="@null"
+                android:src="@drawable/notification"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Product"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton_cart_search"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_margin="1dp"
+                android:background="@null"
+                android:src="@drawable/cart" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <!-- pembungkus untuk bagian header -->
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="40dp"
-            android:layout_gravity="center"
-            >
-            <ImageButton
-                android:id="@+id/btnatas"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/shape_white"
-                android:src="@drawable/icon_burger_menu"
-                android:layout_marginLeft="30dp"
-                />
-            <TextView
-                android:id="@+id/tvsearch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Search"
-                android:textSize="25sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_bold"
-                android:layout_marginLeft="90dp"
-                android:layout_gravity="center"
-                />
-            <ImageButton
-                android:id="@+id/btncart"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/shape_white"
-                android:src="@drawable/icon_shopping_cart"
-                android:layout_marginLeft="40dp"
-                />
-            <ImageButton
-                android:id="@+id/btnatassmpg"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/shape_white"
-                android:src="@drawable/icon_notifications"
-                android:layout_marginLeft="15dp"
-                />
-        </LinearLayout>
-    </LinearLayout>
+            android:orientation="vertical">
 
-</FrameLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <!-- SearchView untuk pencarian -->
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_background_article"
+                    android:iconifiedByDefault="false"
+                    android:queryHint="Cari produk..."
+                    app:queryBackground="@null"
+                    app:iconifiedByDefault="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/categoryButtonContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- Buttons will be added programmatically -->
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

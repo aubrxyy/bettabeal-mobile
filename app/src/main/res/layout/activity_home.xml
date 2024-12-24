@@ -23,6 +23,8 @@
         android:background="@color/white"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_nav"
+        app:itemIconTint="@null"
+        app:itemTextColor="@null"
         android:padding="10dp"
         />
 

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ArticleDetails"
+    android:background="@drawable/background_app">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_down"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_margin="1dp"
+                android:background="@null"
+                app:srcCompat="@drawable/button_back" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Article"
+                android:layout_marginRight="35dp"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    app:srcCompat="@drawable/contoh_artikel" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/rounded_background_article"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="start"
+                            android:text="Aceng"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="end"
+                            android:text="1 January 2024"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/rounded_background_article"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/black"
+                            android:gravity="fill"
+                            android:text="Black Samurai"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:text="Ikan cupang Black Samurai adalah salah satu varian yang paling dicari oleh para penggemar cupang karena keindahan dan tampilannya yang unik. Seperti namanya, ikan ini menampilkan kombinasi warna hitam pekat dengan sentuhan sisik keperakan atau putih, memberikan kesan seperti seorang samurai berpakaian zirah gelap yang elegan. Karakteristik ini membuat Black Samurai terlihat kuat dan misterius, menjadikannya salah satu jenis cupang yang populer dan bernilai tinggi.  1. Karakteristik dan Penampilan Ikan cupang Black Samurai memiliki tubuh berwarna hitam dominan yang kontras dengan lapisan sisik putih atau keperakan pada beberapa bagian tubuh dan ekornya. Warna yang unik ini muncul berkat teknik pembiakan selektif, yang membutuhkan ketelitian untuk menjaga warna dan pola yang konsisten. Sirip-siripnya seringkali panjang dan berkibar indah, menambah kesan eksotis dan elegan pada ikan ini.  2. Perawatan Black Samurai Sama seperti ikan cupang lainnya, Black Samurai memerlukan perawatan khusus agar tetap sehat dan tampil menawan. Berikut adalah beberapa tips dasar dalam merawat ikan cupang Black Samurai: Kualitas Air: Gunakan air bersih dengan pH yang seimbang, biasanya antara 6,5 hingga 7,5. Pastikan untuk mengganti air secara berkala agar kualitasnya tetap optimal. Suhu: Suhu air ideal untuk ikan cupang adalah sekitar 24-27°C. Gunakan pemanas akuarium jika perlu, terutama pada cuaca dingin. Pakan: Berikan pakan yang seimbang, seperti pelet khusus cupang, jentik nyamuk, atau kutu air. Variasi pakan sangat penting untuk menjaga warna dan kesehatan Black Samurai. Ukuran Akuarium: Meskipun ikan cupang dapat hidup di akuarium kecil, Black Samurai akan lebih nyaman dan aktif jika ditempatkan di akuarium yang cukup luas, sekitar 10 liter atau lebih."
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

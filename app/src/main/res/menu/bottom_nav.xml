@@ -10,23 +10,19 @@
         android:title="Search"
         android:icon="@drawable/icon_search_nav"
         />
-
     <item
         android:id="@+id/plus_nav"
         android:title="Add"
-        android:icon="@drawable/icon_tambah_nav"
+        android:icon="@drawable/logo_betta_baru"
         />
-
     <item
-        android:id="@+id/chat_nav"
-        android:title="Chat"
+        android:id="@+id/article_nav"
+        android:title="Article"
         android:icon="@drawable/icon_chat_nav"
         />
-
     <item
         android:id="@+id/prof_nav"
         android:title="Profile"
         android:icon="@drawable/icon_profile_nav"
         />
-
 </menu>

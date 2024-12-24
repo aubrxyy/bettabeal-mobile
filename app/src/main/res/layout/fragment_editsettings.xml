@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Editsettings"
+    android:id="@+id/editset"
+    android:background="@drawable/background_app">
+
+    <LinearLayout
+        android:id="@+id/lnatas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="24sp"
+            android:layout_marginLeft="150dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnet"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        app:layout_constraintTop_toBottomOf="@+id/lnatas"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp" />
+
+        <FrameLayout
+            android:layout_width="370dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rectangle_settings">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgrey"
+                android:text="username"
+                android:textSize="14sp"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="30dp" />
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="28dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="370dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rectangle_settings">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgrey"
+                android:textSize="14sp"
+                android:text="Date of birth"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="30dp" />
+
+            <EditText
+                android:id="@+id/dateOfBirthEditText"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="28dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="370dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rectangle_settings">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgrey"
+                android:textSize="14sp"
+                android:text="Phone number"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="30dp" />
+
+            <EditText
+                android:id="@+id/phoneNumberEditText"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="28dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="370dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rectangle_settings">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgrey"
+                android:textSize="14sp"
+                android:text="Email"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="30dp" />
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="28dp" />
+        </FrameLayout>
+
+        
+
+        <FrameLayout
+        android:layout_width="370dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/rectangle_settings">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Image"
+            android:textColor="@color/darkgrey"
+            android:textSize="14sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp" />
+
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnAddProfilePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:text="Add Photo"
+            android:textColor="@color/blue" />
+    </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/lnet"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/backsettings"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_btn_white"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Back"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:layout_marginRight="8dp" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Save"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
